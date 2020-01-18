@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Dimension by HTML5 UP</title>
+		<title>Louis Nix II</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -42,10 +42,10 @@
 						<!-- Intro -->
 							<article id="intro">
 								<h2 class="major">Intro</h2>
-								<span class="image"><img src="images/headshot.jpg" alt="" /></span>
+								<span class="image"><img src="images/headshot.jpg" width="200" length="200"/></span>
 								<p>My name is Louis, and I am a young professional with a passion for using data analysis to produce insights and business value.</p>
 								<p>I studied in undergraduate at Tulane University, where I earned a bachelor's of science with a double major in economics and international realtions. At present, I am expanding upon my technical skills for research and data analytics by earning a master's degree from Columbia in Quantitative Methods in the Social Sciences.</p>
-								<p>I am passionate about monetary economics, payment systems, research design, social science research, and quality analytics. Typically, I work in R or Python for my projects, though I also have experience with SQL, GeoDa, QGIS, and other programs / languages.</p>
+								<p>I am passionate about monetary economics, payment systems, research design, social science research, and quality analytics. Typically, I work in R or Python for my projects, though I also have experience with Git, SQL, GeoDa, QGIS, and familiarity with HTML.</p>
 								<p>My website contains examples of research projects I have conducted relating to time-series data, GIS-based research (from address encoding to spatial statistics), data vizualization, and basic dashboard construction. You can also find my CV and contact information. Feel free to explore and to reach out to me if you are interested in my experiences.</p>
 								<p>Have a great day, and thank you for visiting!</p>
 							</article>
@@ -55,13 +55,26 @@
 								<h2 class="major">Data Analytics</h2>
 								<section class="posts">
 									<header>
-										<h3><a href="#">Financial Inclusion:<br />
-										The relationship between infrastructure and bank usage.</a></h3>
+										<h3>Financial Inclusion:<br /> 
+											Improving Measures in NYC</a></h3>
 									</header>
-									<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-									<p>I am passionate about financial inclusion as well as monetary economics focusing on payment systems. Given the advent of mobile banking, I wanted to investigate whether or not access physical infrastructure has maintained a role in determining whether or not an individual utilizes traditional banking services. My investigation utilized ATMs as a proxy to measure physical networks of infrastructure in New York City.</p>
+									<p>A past study commissioned by the City of New York used a logit model trained on data collected by the FDIC to estimate measures for financial inclusion for the 55 neighborhood districts of NYC. In short, the study used FDIC data measuring unbanked and underbanked rates for the U.S. as a whole to train a predictive logit model, which was then fed demographic data to estimate the two rates for each of the 55 neighborhoods.</p>
+									<p>Given that the FDIC has conducted the same study two more times since the original report, adding hundreds of thousands of new data points, I contended that the model could be improved in terms of variable specification and the data fed into the model. After a thorough investigation, I settled on an improved model by converting to an ordinal logistic regression. The new model, with additional controls I chose to include, produced a more parsimonious interpretation as well as improved estimates for the impact of the demographic variables originally controlled for.</p>
+									<p>The project was great for exploring how to think about both statistical improvement and parsimony in a complex context. I utilized a structured form of analysis to indentify which changes to the model and the variables produced real improvements. The project was also great for learning how to build on previous models to produce valuable improvements since better estimates for the neighborhoods can actively guide NYC initiatives to improve financial inclusion in lower-income neighborhoods.</p>
 									<ul class="actions special">
-										<li><a href="#" class="button">Full Project</a></li>
+										<li><a href="images/Data_Analysis_Final_Project.pdf" class="button">Full Project</a></li>
+									</ul>
+								</section>
+								<section class="posts">
+									<header>
+										<h3>Banking Infrastructure and Inclusion:<br />
+											A Spatial Investigation of Physical Networks of Access and Measures of Inclusion</a></h3>
+									</header>
+									<p>I am passionate about financial inclusion as well as monetary economics focusing on payment systems. Given the advent of mobile banking, I wanted to investigate whether or not access to physical infrastructure plays a role in determining whether or not an individual utilizes traditional banking services. My investigation utilized ATMs as a proxy to measure physical networks of infrastructure in New York City.</p>
+									<p>The investigation was quite exciting to conduct as I found the  use of ATMs for modeling physical networks to be previously unused to such a degree. The document itself is quite technical and geared towards a denser read. To that end, it includes all of the code used in the analysis as well as relatively raw outputs for the spatial regressions used. The goal was to provide a transparent and replicable statistical analysis for somewhat more advanced readers.</p>
+									<p>In short, I found that physical networks are still predictive of measures of inclusion even though mobile banking has begun to remove the need for physical access points to financial services. In fact, the most unincluded neighborhoods exhibited much smaller networks, especially at the extreme end of non-inclusion.</p>
+									<ul class="actions special">
+										<li><a href="images/GIS_ATMs_and_Inclusion.pdf" class="button">Full Project</a></li>
 									</ul>
 								</section>
 							</article>
@@ -71,16 +84,26 @@
 							<article id="dataviz">
 								<h2 class="major">Data Viz</h2>
 								<section class="posts">
-										<header>
-											<h3><a href="#">ATMs in NYC</a></h3>
-										</header>
-										<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-										<p>I wanted to know what the physical infrastructure of the banking industry looked like in NYC. To that end, I produced vizualizations to explore the data.</p>
-										<ul class="actions special">
-											<li><a href="#" class="button">Full Project</a></li>
-										</ul>
+									<header>
+										<h3>Unbanked Rates in NYC</h3>
+									</header>
+									<a href="images/Unbanked_Rates.png" class="image fit"><img src="images/Unbanked_Rates.png" alt="" /></a>
+									<p>New estimates I produced for unbanked rates (percentage of the population without a bank account) across the 55 community districts of NYC. I chose to use quantiles to divided the shading and levels of the legend to illuminate the percentiles in which districts fell.</p>
 								</section>
-								
+								<section>
+									<header>
+										<h3>Underbanked Rates in NYC</h3>
+									</header>
+									<a href="images/Underbanked_Rates.png" class="image fit"><img src="images/Underbanked_Rates.png" alt="" /></a>
+									<p>New estimates for the underbanked rates (percentage of the population with a bank account that still utilize alternative sources of financing) accross the 55 community districts in NYC. I again chose to use quatiles.</p>
+								</section>
+								<section>
+									<header>
+										<h3>ATM Clustering Significance Map</h3>
+									</header>
+									<a href="images/ATMs_Cluster_Significance.png" class="image fit"><img src="images/ATMs_Cluster_Significance.png" alt="" /></a>
+									<p>After mapping the number of ATMs within each of the 55 community districts of NYC, I wanted to identify where clusters (or voids) of ATM locations were significant. I used GeoDa to produce a simple, easily interpreted graphic showing areas with significant clustering or lack of ATMs. Districts with "high-high" classification have a significant clustering of ATMs, while "low-low" districts have a lack of ATM networks.</p>
+								</section>
 							</article>
 							
 						<!-- Curriculum Vitae -->
