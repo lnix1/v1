@@ -2596,7 +2596,7 @@ input, select, textarea {
 		background-image: url("images/ramy-kabalan-teGT7MBTPrc-unsplash.jpg"), url("../../images/bg.jpg");
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
-		background-size: 170%,								150%;
+		background-size: 170%,								170%;
 		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
 		left: 0;
@@ -3055,8 +3055,8 @@ input, select, textarea {
 
 			#header {
 				background-attachment: scroll;
-				background-position: top left, center center;
-				background-size: auto,		cover;
+				background-position: center center, center center;
+				background-size: 100%,		cover;
 				left: auto;
 				padding: 6em 4em;
 				position: relative;
