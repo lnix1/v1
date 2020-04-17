@@ -2970,7 +2970,7 @@ input, select, textarea {
 
 	body.is-touch #header {
 		background-attachment: scroll;
-		background-size: auto, cover;
+		background-size: 100%, cover;
 	}
 
 	body.is-touch .poptrox-popup .nav-next,
