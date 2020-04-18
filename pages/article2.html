@@ -10,7 +10,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
-		<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@ramykabalan?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Ramy Kabalan"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Ramy Kabalan</span></a>
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
 		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 		<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script> 
@@ -47,10 +46,14 @@
 							// load a tile layer
 							L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png	',
 								{
-								attribution: 'Tiles by <a href="https://openmaptiles.com/downloads/dataset/osm/australia-oceania/australia/#2.85/-29.08/139.49">OpenStreetMap</a>, Data by <a href="http://mass.gov/mgis">NEED to FIX</a>',
+								attribution: 'Tiles by <a href="https://openmaptiles.com/downloads/dataset/osm/australia-oceania/australia/#2.85/-29.08/139.49">OpenStreetMap</a>, Data by <a href="https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms">NASA</a>',
 								maxZoom: 17,
 								minZoom: 1
 								}).addTo(map);
+							$.getJSON("../assets/data/fires.geojson",function(data){
+								// add GeoJSON layer to the map once the file is loaded
+								L.geoJson(data).addTo(map);
+							});
 							</script>
 					</section>
 					
